@@ -183,6 +183,17 @@ section { padding: 100px 48px 80px; position: relative; }
 #about { border-top: 1px solid var(--border); }
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
 
+.skills-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+.skill-tag {
+  padding: 7px 16px;
+  border: 1px solid var(--dim);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--text);
+  transition: all 0.2s;
+}
+.skill-tag:hover { border-color: var(--accent); color: var(--accent); }
+
 .sub-label {
   font-size: 11px;
   letter-spacing: 0.18em;
@@ -195,24 +206,6 @@ section { padding: 100px 48px 80px; position: relative; }
 .edu-degree { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 300; margin-bottom: 4px; }
 .edu-school { font-size: 12px; color: var(--muted); letter-spacing: 0.1em; }
 
-.bar {
-  background: #1e293b;
-  border-radius: 10px;
-  overflow: hidden;
-  margin-bottom: 20px;
-}
-
-.bar div {
-  height: 10px;
-  background: linear-gradient(90deg, #38bdf8, #6366f1);
-  width: var(--width);
-  animation: load 2s ease-in-out;
-}
-
-@keyframes load {
-  from { width: 0; }
-  to { width: var(--width); }
-}
 .cert-item { display: flex; align-items: center; gap: 14px; padding: 14px 0; border-bottom: 1px solid var(--border); }
 .cert-item:first-of-type { border-top: 1px solid var(--border); }
 .cert-icon { width: 30px; height: 30px; border: 1px solid var(--accent); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 13px; color: var(--accent); }
@@ -227,129 +220,7 @@ section { padding: 100px 48px 80px; position: relative; }
   font-style: italic;
   font-weight: 300;
   line-height: 1.6;
-  color: var(--text)
-}
-  <!-- SECTION 2: ABOUT -->
-<section id="about" style="padding: 60px 40px; max-width: 600px;">
-
-  <p style="font-size:12px; color:#888; letter-spacing:0.08em; margin:0 0 6px;">01 &mdash; Section</p>
-
-  <!-- EDUCATION -->
-  <div style="margin-bottom: 40px;">
-    <h3 style="font-size:18px; font-weight:500; margin:0 0 16px; color:#fff;">Education</h3>
-
-    <div style="margin-bottom:14px; padding-left:14px; border-left:2px solid #a89cee;">
-      <div style="font-size:14px; font-weight:500; color:#fff; margin-bottom:3px;">Master of Computer Applications</div>
-      <div style="font-size:12px; color:#888;">MIT Thandavapura &middot; In Progress</div>
-    </div>
-
-    <div style="padding-left:14px; border-left:2px solid #a89cee;">
-      <div style="font-size:14px; font-weight:500; color:#fff; margin-bottom:3px;">Bachelor of Computer Applications</div>
-      <div style="font-size:12px; color:#888;">BGS First Grade College &middot; Completed</div>
-    </div>
-  </div>
-
-  <hr style="border:none; border-top:0.5px solid #333; margin:0 0 40px;">
-<!-- ABOUT SECTION -->
-<section id="about" style="padding: 60px 40px; max-width: 600px;">
-
-  <p style="font-size:12px; color:#888; letter-spacing:0.08em; margin:0 0 6px;">
-    01 &mdash; Section
-  </p>
-
-  <!-- EDUCATION -->
-  <div style="margin-bottom: 40px;">
-    <h3 style="font-size:18px; margin-bottom:16px;">Education</h3>
-
-    <div style="margin-bottom:14px; padding-left:14px; border-left:2px solid #a89cee;">
-      <div>Master of Computer Applications</div>
-      <div style="font-size:12px; color:#888;">MIT Thandavapura · In Progress</div>
-    </div>
-
-    <div style="padding-left:14px; border-left:2px solid #a89cee;">
-      <div>Bachelor of Computer Applications</div>
-      <div style="font-size:12px; color:#888;">BGS First Grade College · Completed</div>
-    </div>
-  </div>
-
-  <hr style="border:none; border-top:0.5px solid #333; margin:40px 0;">
-
-</section>
-
-<!-- SKILLS SECTION (separate properly) -->
-<section id="skills" style="padding:40px; max-width:600px;">
-
-    <h1>Skills</h1>
-
-    <p>Networking (TCP/IP, DNS, HTTP/HTTPS)</p>
-    <div class="bar"><div style="--width:85%"></div></div>
-
-    <p>Linux & Operating Systems</p>
-    <div class="bar"><div style="--width:80%"></div></div>
-
-    <p>Python (Scripting & Automation)</p>
-    <div class="bar"><div style="--width:75%"></div></div>
-
-    <p>Web Security (SQL Injection, XSS, CSRF)</p>
-    <div class="bar"><div style="--width:70%"></div></div>
-
-    <p>Cybersecurity Fundamentals</p>
-    <div class="bar"><div style="--width:75%"></div></div>
-
-    <p>Security Tools (Nmap, Wireshark, Burp Suite)</p>
-    <div class="bar"><div style="--width:70%"></div></div>
-
-    <p>Ethical Hacking</p>
-    <div class="bar"><div style="--width:65%"></div></div>
-
-    <p>Git & GitHub</p>
-    <div class="bar"><div style="--width:70%"></div></div>
-
-</section>
-    <!-- Certifications -->
-    <div style="margin-top:30px;">
-      <p style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:#888; margin:0 0 12px;">Certifications</p>
-
-      <div style="display:flex; align-items:flex-start; gap:10px; margin-bottom:12px;">
-        <span style="color:#a89cee; font-size:14px; margin-top:1px;">&#10022;</span>
-        <div>
-          <div style="font-size:13px; color:#fff; margin-bottom:2px;">Blue Team Fundamentals</div>
-          <div style="font-size:11px; color:#888;">Security Operations</div>
-        </div>
-      </div>
-
-      <div style="display:flex; align-items:flex-start; gap:10px;">
-        <span style="color:#a89cee; font-size:14px; margin-top:1px;">&#10022;</span>
-        <div>
-          <div style="font-size:13px; color:#fff; margin-bottom:2px;">Google Cybersecurity Certificate</div>
-          <div style="font-size:11px; color:#888;">Google Career Certificates</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <hr style="border:none; border-top:0.5px solid #333; margin:0 0 40px;">
-
-  <!-- INTEREST -->
-  <div>
-    <h3 style="font-size:18px; font-weight:500; margin:0 0 14px; color:#fff;">Interest</h3>
-    <div style="font-size:13px; color:#888; line-height:1.7; padding:14px 16px; border-left:2px solid #a89cee; background:#111; border-radius:0 8px 8px 0;">
-      Passionate about Cyber Security and building a career focused on protecting systems and networks from evolving threats.
-    </div>
-  </div>
-
-</section>
-
-<script>
-  window.addEventListener('DOMContentLoaded', function () {
-    setTimeout(function () {
-      document.querySelectorAll('.bar').forEach(function (bar) {
-        bar.style.width = bar.getAttribute('data-width') + '%';
-      });
-    }, 300);
-  });
-</script>
-
+  color: var(--text);
 }
 
 /* ========================
@@ -473,14 +344,41 @@ footer {
 <section id="about">
   <div class="reveal">
     <p class="section-num">01 &mdash; Section</p>
-    <h2 class="section-title"><em>About Me</em></h2>
+    <h2 class="section-title">Skills &amp; <em>Education</em></h2>
   </div>
-
-  <div style="display: flex; flex-direction: column; align-items: flex-start;">
-
-    <!-- Education -->
+  <div class="about-grid">
     <div class="reveal">
-      <h3 class="part-heading">Education</h3>
+      <p class="sub-label">Technical Skills</p>
+      <div class="skills-list">
+        <span class="skill-tag">C Programming</span>
+        <span class="skill-tag">HTML / CSS</span>
+        <span class="skill-tag">JavaScript</span>
+        <span class="skill-tag">Networking</span>
+        <span class="skill-tag">Cybersecurity</span>
+        <span class="skill-tag">Cloud Security</span>
+      </div>
+
+      <div style="margin-top:40px;">
+        <p class="sub-label">Certifications</p>
+        <div class="cert-item">
+          <div class="cert-icon">&#10022;</div>
+          <div>
+            <div style="font-size:13px;margin-bottom:2px;">Blue Team Fundamentals</div>
+            <div style="font-size:11px;color:var(--muted);">Security Operations</div>
+          </div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-icon">&#10022;</div>
+          <div>
+            <div style="font-size:13px;margin-bottom:2px;">Google Cybersecurity Certificate</div>
+            <div style="font-size:11px;color:var(--muted);">Google Career Certificates</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <p class="sub-label">Education</p>
       <div class="edu-item">
         <div class="edu-degree">Master of Computer Applications</div>
         <div class="edu-school">MIT Thandavapura &middot; In Progress</div>
@@ -489,15 +387,11 @@ footer {
         <div class="edu-degree">Bachelor of Computer Applications</div>
         <div class="edu-school">BGS First Grade College &middot; Completed</div>
       </div>
-    </div>
 
-    <!-- Skills -->
-    <div class="reveal" style="margin-top: 40px;">
-      <h3 class="part-heading">Skills</h3>
-      <div class="skill-row">...</div>
-      ...
+      <div class="interest-box reveal">
+        Passionate about Cyber Security and building a career focused on protecting systems and networks from evolving threats.
+      </div>
     </div>
-
   </div>
 </section>
 
