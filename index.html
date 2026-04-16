@@ -195,6 +195,24 @@ section { padding: 100px 48px 80px; position: relative; }
 .edu-degree { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 300; margin-bottom: 4px; }
 .edu-school { font-size: 12px; color: var(--muted); letter-spacing: 0.1em; }
 
+.bar {
+  background: #1e293b;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.bar div {
+  height: 10px;
+  background: linear-gradient(90deg, #38bdf8, #6366f1);
+  width: var(--width);
+  animation: load 2s ease-in-out;
+}
+
+@keyframes load {
+  from { width: 0; }
+  to { width: var(--width); }
+}
 .cert-item { display: flex; align-items: center; gap: 14px; padding: 14px 0; border-bottom: 1px solid var(--border); }
 .cert-item:first-of-type { border-top: 1px solid var(--border); }
 .cert-icon { width: 30px; height: 30px; border: 1px solid var(--accent); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 13px; color: var(--accent); }
@@ -210,6 +228,7 @@ section { padding: 100px 48px 80px; position: relative; }
   font-weight: 300;
   line-height: 1.6;
   color: var(--text)
+}
   <!-- SECTION 2: ABOUT -->
 <section id="about" style="padding: 60px 40px; max-width: 600px;">
 
@@ -231,7 +250,35 @@ section { padding: 100px 48px 80px; position: relative; }
   </div>
 
   <hr style="border:none; border-top:0.5px solid #333; margin:0 0 40px;">
-<section id="skills" class="section hidden">
+<!-- ABOUT SECTION -->
+<section id="about" style="padding: 60px 40px; max-width: 600px;">
+
+  <p style="font-size:12px; color:#888; letter-spacing:0.08em; margin:0 0 6px;">
+    01 &mdash; Section
+  </p>
+
+  <!-- EDUCATION -->
+  <div style="margin-bottom: 40px;">
+    <h3 style="font-size:18px; margin-bottom:16px;">Education</h3>
+
+    <div style="margin-bottom:14px; padding-left:14px; border-left:2px solid #a89cee;">
+      <div>Master of Computer Applications</div>
+      <div style="font-size:12px; color:#888;">MIT Thandavapura · In Progress</div>
+    </div>
+
+    <div style="padding-left:14px; border-left:2px solid #a89cee;">
+      <div>Bachelor of Computer Applications</div>
+      <div style="font-size:12px; color:#888;">BGS First Grade College · Completed</div>
+    </div>
+  </div>
+
+  <hr style="border:none; border-top:0.5px solid #333; margin:40px 0;">
+
+</section>
+
+<!-- SKILLS SECTION (separate properly) -->
+<section id="skills" style="padding:40px; max-width:600px;">
+
     <h1>Skills</h1>
 
     <p>Networking (TCP/IP, DNS, HTTP/HTTPS)</p>
@@ -246,19 +293,19 @@ section { padding: 100px 48px 80px; position: relative; }
     <p>Web Security (SQL Injection, XSS, CSRF)</p>
     <div class="bar"><div style="--width:70%"></div></div>
 
-    <p>Cybersecurity Fundamentals (CIA Triad, Encryption)</p>
+    <p>Cybersecurity Fundamentals</p>
     <div class="bar"><div style="--width:75%"></div></div>
 
     <p>Security Tools (Nmap, Wireshark, Burp Suite)</p>
     <div class="bar"><div style="--width:70%"></div></div>
 
-    <p>Ethical Hacking & Penetration Testing</p>
+    <p>Ethical Hacking</p>
     <div class="bar"><div style="--width:65%"></div></div>
 
     <p>Git & GitHub</p>
     <div class="bar"><div style="--width:70%"></div></div>
-</section>
 
+</section>
     <!-- Certifications -->
     <div style="margin-top:30px;">
       <p style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:#888; margin:0 0 12px;">Certifications</p>
